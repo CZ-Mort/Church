@@ -1,0 +1,37 @@
+{
+  "name": "LimitTransport",
+  "version": "1.0.1",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./types/index.d.ts",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack-dev-server --open --config webpack.dev.js --host 0.0.0.0",
+    "pub": "webpack --config webpack.prod.js && gulp packToOne"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "co": "^4.6.0",
+    "del": "^2.2.1",
+    "fs": "0.0.2",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sequence": "^0.4.5",
+    "gulp-uglify": "^1.5.4",
+    "path": "^0.12.7",
+    "progress": "^2.0.0",
+    "ts-loader": "^4.0.0",
+    "tslint": "^5.9.1",
+    "typescript": "^3.5.1",
+    "webpack": "^4.1.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.0",
+    "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "uglifyjs-webpack-plugin": "^2.2.0"
+  }
+}

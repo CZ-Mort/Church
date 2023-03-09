@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    < title > Tetris < / Title >
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <link rel=stylesheet type="text/css" href="teris.css">
+    <style type="text/css">
+        /*Import external font file*/
+        @font-face{
+            font- family:tmb;/ *Name the font TMB*/
+            src:url ("DS- DIGIB.TTF ") format (" TrueType "); / * format is font file format, TrueType is ttf*/
+        }
+        div>span{
+            font-family:tmb;
+            font-size:18pt;
+            color:green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="bg">
+        <!--ui-->
+        <div class="ui_bg">
+            <div style="float:left;margin-right:4px;">
+                Speed: < span id = "cur_ speed">1</span>
+            </div>
+            <div style="float:left;">
+                Current score: < span id = "cur_ points">0</span>
+            </div>
+            <div style="float:right;">
+                Maximum score: < span id = "Max_ points">0</span>
+            </div>
+        </div>
+        <canvas id="text" width="500" height="100" style="position:absolute;"></canvas>
+        <canvas id="stage" width="500" height="100" style="position:absolute;"></canvas>
+    </div>
+    <script src='EasePack.min.js'></script>
+    <script src='TweenLite.min.js'></script>
+    <script src='easeljs-0.7.1.min.js'></script>
+    <script src='requestAnimationFrame.js'></script>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="teris.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+ 1<!DOCTYPE html> 
+ 2<html>
+ 3  <head>
+ 4    <title>XNA4 Tetris Game</title>
+ 5
+ 6    <link rel="stylesheet" href="../Common/browser.css">
+ 7    <link rel="stylesheet" href="tetris.css">
+ 8    
+ 9    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+10  </head>
+11  <body onload="onLoad()">
+12    <script type="text/javascript">
+13      var jsilConfig = {
+14        printStackTrace: false,
+15        webgl2d: true,
+16        xna: 4,
+17        manifests: [
+18          "tetris.exe",
+19          "Content/tetrisContent.contentproj"
+20        ],
+21        
+22        showProgressBar: true,
+23        showStats: true,
+24
+25        scriptRoot: "",
+26        libraryRoot: "../Libraries/",
+27        fileRoot: "",
+28        contentRoot: "Content/"
+29      };
+30    </script>
+31    <script src="../Libraries/JSIL.js" type="text/javascript"></script>    
+32        
+33    <canvas id="canvas" width="1024" height="768">
+34    </canvas><br>
+35    <div id="welcomeMessage">
+36      <p align="center"><a href="http://jsil.org/"><img src="http://jsil.org/images/jsil_48px.png" alt="JSIL logo" border="0"></a></p>
+37      <p>This demo is a simple XNA 4.0 game, compiled from C# to JavaScript using <A href="http://jsil.org/">JSIL, my open-source C# to JavaScript compiler</a>. It should run in any browser that supports HTML5 and a modern version of JavaScript, no plugins required.</p>
+38      <p>You can get the source code to this demo from <a href="https://github.com/ttocs7/tetris">the author's page on GitHub</a>.</p>
+39      <p align="center">To begin playing, click the <b>Load Game</b> button below.</p>
+40    </div>
+41    <button id="loadButton">Load Game</button>
+42    <div id="log"><center><i>Left/right arrows to move piece. Up to rotate piece. Space to drop piece.</i></center><br></div>
+43    
+44    <script type="text/javascript">
+45      
+46      var assetsToLoad = [
+47      ];
+48            
+49      function runMain () {
+50        try {
+51          document.getElementById("welcomeMessage").setAttribute("style", "display: none");
+52        } catch (ex) {
+53        }
+54
+55        // We can't invoke Main() since it disposes the Game immediately, breaking everything.
+56        var asm = JSIL.GetAssembly("tetris, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+57        var game = new asm.tetris.Game1();
+58        game.Run();
+59      };
+60    </script>
+61    <script type="text/javascript">
+62    var _gaq = _gaq || [];
+63    _gaq.push(['_setAccount', 'UA-6375004-2']);
+64    _gaq.push(['_setDomainName', '.luminance.org']);
+65    _gaq.push(['_trackPageview']);
+66
+67    (function() {
+68      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+69      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+70      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+71    })();
+72    </script>
+73  </body>
+74</html>
